@@ -1,0 +1,17 @@
+14:40:49.051 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"BET_PLACED","player":"Adam"}}, expected={headers: {}; body:{"type": "BET_PLACED", "player" : "Adam" }}
+14:40:49.053 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"BET_PLACED","player":"Bob"}}, expected={headers: {}; body:{"type": "BET_PLACED", "player" : "Bob" }}
+14:40:49.053 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"COUNTDOWN","value":1}}, expected={headers: {}; body:{"type": "COUNTDOWN", "value" : 1 }}
+14:40:49.054 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"PLAYER_RESULT","won":true,"amount":99.00}}, expected={headers: {}; body:{"type": "PLAYER_RESULT", "won" : true, "amount": 99.00 }}
+14:40:49.054 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"RESULTS","winners":[{"name":"Adam","win":99.00}]}}, expected={headers: {}; body:{"type": "RESULTS", "winners" : [ { "name": "Adam", "win" : 99.00} ] }}
+14:40:49.055 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"ROUND_RESULT","value":7}}, expected={headers: {}; body:{"type": "ROUND_RESULT", "value" : 7 }}
+14:40:49.067 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"BET_PLACED","player":"Adam"}}, expected={headers: {}; body:{"type": "BET_PLACED", "player" : "Adam" }}
+14:40:49.068 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"BET_PLACED","player":"Bob"}}, expected={headers: {}; body:{"type": "BET_PLACED", "player" : "Bob" }}
+14:40:49.068 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"COUNTDOWN","value":1}}, expected={headers: {}; body:{"type": "COUNTDOWN", "value" : 1 }}
+14:40:49.069 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"PLAYER_RESULT","won":false}}, expected={headers: {}; body:{"type": "PLAYER_RESULT", "won" : false }}
+14:40:49.069 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"RESULTS","winners":[{"name":"Adam","win":99.00}]}}, expected={headers: {}; body:{"type": "RESULTS", "winners" : [ { "name": "Adam", "win" : 99.00} ] }}
+14:40:49.070 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"ROUND_RESULT","value":7}}, expected={headers: {}; body:{"type": "ROUND_RESULT", "value" : 7 }}
+14:40:49.097 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+14:40:49.106 [Test worker] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+14:40:49.108 [Test worker] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Destroying Spring FrameworkServlet 'dispatcherServlet'
+14:40:49.122 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+14:40:49.132 [Test worker] INFO  o.a.coyote.http11.Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]

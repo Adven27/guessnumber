@@ -1,0 +1,26 @@
+14:40:43.426 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"COUNTDOWN","value":1}}, expected={headers: {}; body:{"type": "COUNTDOWN", "value" : 1 }}
+14:40:43.428 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"ROUND_RESULT","value":7}}, expected={headers: {}; body:{"type": "ROUND_RESULT", "value" : 7 }}
+14:40:43.429 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"PLAYER_RESULT","won":false}}, expected={headers: {}; body:{"type": "PLAYER_RESULT", "won" : false }}
+14:40:43.429 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"RESULTS","winners":[]}}, expected={headers: {}; body:{"type": "RESULTS", "winners" : [] }}
+14:40:43.507 [http-nio-8080-exec-6] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGOUT_ALL"}
+14:40:43.508 [http-nio-8080-exec-6] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='PLAYER_UNREGISTERED'} to null
+14:40:43.509 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_UNREGISTERED","player":"Adam"}
+14:40:43.662 [http-nio-8080-exec-7] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGIN", "player": "Adam"}
+14:40:43.663 [http-nio-8080-exec-7] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ConnectedEvent{players=[Adam]} to Adam
+14:40:43.663 [WebSocketClient-AsyncIO-1] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"CONNECTED","players":["Adam"]}
+14:40:43.713 [http-nio-8080-exec-8] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "READY"}
+14:40:43.714 [http-nio-8080-exec-8] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='PLAYER_READY'} to Adam
+14:40:43.715 [WebSocketClient-AsyncIO-1] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_READY","player":"Adam"}
+14:40:43.715 [ Thread-12] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event CountdownEvent{value=2} to Adam
+14:40:43.716 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"COUNTDOWN","value":2}
+14:40:43.815 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "BET", "bet": 10.0, "number": 7 }
+14:40:43.816 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='BET_PLACED'} to Adam
+14:40:43.817 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"BET_PLACED","player":"Adam"}
+14:40:44.216 [ Thread-12] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event CountdownEvent{value=1} to Adam
+14:40:44.217 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"COUNTDOWN","value":1}
+14:40:44.717 [ Thread-12] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event RoundResultEvent{value=7} to Adam
+14:40:44.719 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"ROUND_RESULT","value":7}
+14:40:44.719 [ Thread-12] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerWonEvent{amount=99.00} to Adam
+14:40:44.726 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_RESULT","won":true,"amount":99.00}
+14:40:44.726 [ Thread-12] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ResultsEvent{winners=[Winner{name='Adam', win=99.00}]} to Adam
+14:40:44.727 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"RESULTS","winners":[{"name":"Adam","win":99.00}]}

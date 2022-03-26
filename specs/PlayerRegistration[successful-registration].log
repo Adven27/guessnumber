@@ -1,0 +1,8 @@
+14:40:35.386 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"CONNECTED","players":["Adam"]}}, expected={headers: {}; body:{"type": "CONNECTED", "players":["Adam"]}}
+14:40:35.465 [http-nio-8080-exec-6] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGOUT_ALL"}
+14:40:35.467 [http-nio-8080-exec-6] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='PLAYER_UNREGISTERED'} to null
+14:40:35.470 [WebSocketClient-AsyncIO-1] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_UNREGISTERED","player":"Adam"}
+14:40:35.621 [http-nio-8080-exec-7] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGIN", "player" : "" }
+14:40:35.636 [http-nio-8080-exec-7] WARN  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message validation failed: [ConstraintViolationImpl{interpolatedMessage='must not be blank', propertyPath=player, rootBeanClass=class com.example.game.guessnumber.logic.model.action.PlayerLoginAction, messageTemplate='{javax.validation.constraints.NotBlank.message}'}]
+14:40:35.639 [http-nio-8080-exec-7] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ErrorEvent{violations={player=must not be blank}}  to null
+14:40:35.654 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"ERROR","violations":{"player":"must not be blank"}}

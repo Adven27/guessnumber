@@ -1,0 +1,15 @@
+14:40:36.628 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"ERROR","violations":{"player":"must not be blank"}}}, expected={headers: {}; body:{"type": "ERROR", "violations": {"player": "must not be blank"} } }
+14:40:36.751 [http-nio-8080-exec-8] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGOUT_ALL"}
+14:40:36.912 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGIN", "player": "Adam"}
+14:40:36.913 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ConnectedEvent{players=[Adam]} to Adam
+14:40:36.917 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"CONNECTED","players":["Adam"]}
+14:40:36.969 [http-nio-8080-exec-10] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGIN", "player": "Bob"}
+14:40:36.970 [http-nio-8080-exec-10] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Bob', type='PLAYER_REGISTERED'} to Adam
+14:40:36.972 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_REGISTERED","player":"Bob"}
+14:40:36.975 [http-nio-8080-exec-10] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ConnectedEvent{players=[Adam, Bob]} to Bob
+14:40:36.976 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"CONNECTED","players":["Adam","Bob"]}
+14:40:37.022 [http-nio-8080-exec-4] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "READY" }
+14:40:37.026 [http-nio-8080-exec-4] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='PLAYER_READY'} to Adam
+14:40:37.027 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_READY","player":"Adam"}
+14:40:37.028 [http-nio-8080-exec-4] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='PLAYER_READY'} to Bob
+14:40:37.037 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_READY","player":"Adam"}

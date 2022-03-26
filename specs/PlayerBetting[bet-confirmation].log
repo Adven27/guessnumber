@@ -1,0 +1,32 @@
+14:40:39.427 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"BET_PLACED","player":"Adam"}}, expected={headers: {}; body:{"type": "BET_PLACED", "player" : "Adam" }}
+14:40:39.431 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"COUNTDOWN","value":1}}, expected={headers: {}; body:{"type":"COUNTDOWN","value":1}}
+14:40:39.432 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"ROUND_RESULT","value":7}}, expected={headers: {}; body:{"type": "ROUND_RESULT", "value" : 7 }}
+14:40:39.433 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"PLAYER_RESULT","won":false}}, expected={headers: {}; body:{"type": "PLAYER_RESULT", "won" : false }}
+14:40:39.434 [Test worker] INFO  i.g.a.c.e.e.m.c.check.MqVerifier.verify-0E7RQCE - Verifying actual={headers: {}; body:{"type":"RESULTS","winners":[]}}, expected={headers: {}; body:{"type": "RESULTS", "winners" : [] }}
+14:40:39.462 [http-nio-8080-exec-6] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGOUT_ALL"}
+14:40:39.464 [http-nio-8080-exec-6] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='PLAYER_UNREGISTERED'} to null
+14:40:39.464 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_UNREGISTERED","player":"Adam"}
+14:40:39.617 [http-nio-8080-exec-7] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "LOGIN", "player": "Adam"}
+14:40:39.618 [http-nio-8080-exec-7] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ConnectedEvent{players=[Adam]} to Adam
+14:40:39.618 [WebSocketClient-AsyncIO-2] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"CONNECTED","players":["Adam"]}
+14:40:39.669 [http-nio-8080-exec-8] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "READY"}
+14:40:39.670 [http-nio-8080-exec-8] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerEvent{player='Adam', type='PLAYER_READY'} to Adam
+14:40:39.671 [WebSocketClient-AsyncIO-1] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_READY","player":"Adam"}
+14:40:39.672 [ Thread-10] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event CountdownEvent{value=2} to Adam
+14:40:39.673 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"COUNTDOWN","value":2}
+14:40:39.778 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "BET", "bet": 0.0, "number": 100 }
+14:40:39.850 [http-nio-8080-exec-9] WARN  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message validation failed: [ConstraintViolationImpl{interpolatedMessage='must be less than or equal to 10', propertyPath=number, rootBeanClass=class com.example.game.guessnumber.logic.model.action.PlayerBetAction, messageTemplate='{javax.validation.constraints.Max.message}'}, ConstraintViolationImpl{interpolatedMessage='must be greater than 0.1', propertyPath=bet, rootBeanClass=class com.example.game.guessnumber.logic.model.action.PlayerBetAction, messageTemplate='{javax.validation.constraints.DecimalMin.message}'}]
+14:40:39.851 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ErrorEvent{violations={bet=must be greater than 0.1, number=must be less than or equal to 10}}  to Adam
+14:40:39.852 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message received: {"type": "BET" }
+14:40:39.853 [http-nio-8080-exec-9] WARN  c.e.game.guessnumber.MessageHandler.handleTextMessage - Message validation failed: [ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=bet, rootBeanClass=class com.example.game.guessnumber.logic.model.action.PlayerBetAction, messageTemplate='{javax.validation.constraints.NotNull.message}'}, ConstraintViolationImpl{interpolatedMessage='must not be null', propertyPath=number, rootBeanClass=class com.example.game.guessnumber.logic.model.action.PlayerBetAction, messageTemplate='{javax.validation.constraints.NotNull.message}'}]
+14:40:39.853 [http-nio-8080-exec-9] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ErrorEvent{violations={bet=must not be null, number=must not be null}}  to Adam
+14:40:39.854 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"ERROR","violations":{"bet":"must be greater than 0.1","number":"must be less than or equal to 10"}}
+14:40:39.854 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"ERROR","violations":{"bet":"must not be null","number":"must not be null"}}
+14:40:40.172 [ Thread-10] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event CountdownEvent{value=1} to Adam
+14:40:40.174 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"COUNTDOWN","value":1}
+14:40:40.674 [ Thread-10] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event RoundResultEvent{value=7} to Adam
+14:40:40.675 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"ROUND_RESULT","value":7}
+14:40:40.677 [ Thread-10] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event PlayerResultEvent{won=false} to Adam
+14:40:40.678 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"PLAYER_RESULT","won":false}
+14:40:40.679 [ Thread-10] INFO  c.e.game.guessnumber.MessageHandler.send - Sending event ResultsEvent{winners=[]} to Adam
+14:40:40.680 [WebSocketClient-AsyncIO-3] INFO  specs.WebSocketTester.handleTextMessage - Tester received: {"type":"RESULTS","winners":[]}
