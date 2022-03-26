@@ -1,5 +1,7 @@
 # Guess Number over Web Socket 
 
+Live specification (_integration test report + documentation_): https://adven27.github.io/guessnumber/specs/Specs.html
+
 ## Running
 
 1. Run app:
@@ -38,5 +40,6 @@ Run:
 
 See report in browser:  [/build/reports/specs/specs/Specs.html](/build/reports/specs/specs/Specs.html) 
 
+Published report: [https://adven27.github.io/guessnumber/specs/Specs.html](https://adven27.github.io/guessnumber/specs/Specs.html)
 
 
