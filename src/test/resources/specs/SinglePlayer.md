@@ -27,23 +27,17 @@ Also, player receives a message with a list of winning players in which there is
 
 #### [Win](-)
 
+__Given__
+
+---
+
+Round starts with player: [Adam](- "startRoundFor(#TEXT)")
+
 __When__
 
 ---
 
-A player:
-
-1. logins as `Adam`
-2. starts a game
-3. places a bet of `10.0` on number `7`
-
 - [Adam sends]
--   ```json
-    {"type": "LOGIN", "player" : "Adam" }
-    ```
--   ```json
-    {"type": "READY"}
-    ```
 -   ```json
     {"type": "BET", "bet": 10.0, "number": 7 }
     ```
@@ -54,16 +48,7 @@ __Then__
 
 Server sends to player status events and game events.
 
-- [Adam receives]
--   ```json
-    {"type":"CONNECTED", "players":["Adam"]}
-    ```
--   ```json
-    {"type": "PLAYER_READY", "player" : "Adam" }
-    ```
--   ```json
-    {"type": "COUNTDOWN", "value" : 2 }
-    ```
+- [Adam receives in any order]
 -   ```json
     {"type": "BET_PLACED", "player" : "Adam" }
     ```    
@@ -87,17 +72,17 @@ Also, player receives a message with an empty list of winning players.
 
 #### [Lose](-)
 
+__Given__
+
+---
+
+Round starts with player: [Adam](- "startRoundFor(#TEXT)")
+
 __When__
 
 ---
 
 - [Adam sends]
--   ```json
-    {"type": "LOGIN", "player" : "Adam" }
-    ```
--   ```json
-    {"type": "READY"}
-    ```
 -   ```json
     {"type": "BET", "bet": 10.0, "number": 2 }
     ```
@@ -108,17 +93,8 @@ __Then__
 
 - [Adam receives in any order]
 -   ```json
-    {"type": "CONNECTED", "players":["Adam"]}
-    ```
--   ```json
-    {"type": "PLAYER_READY", "player" : "Adam" }
-    ```
--   ```json
     {"type": "BET_PLACED", "player" : "Adam" }
     ```    
--   ```json
-    {"type": "COUNTDOWN", "value" : 2 }
-    ```
 -   ```json
     {"type": "COUNTDOWN", "value" : 1 }
     ```
@@ -137,28 +113,22 @@ Absent of a bet is considered as a lose.
 
 #### [No bet placed](-)
 
+__Given__
+
+---
+
+Round starts with player: [Adam](- "startRoundFor(#TEXT)")
+
 __When__
 
-- [Adam sends]
--   ```json
-    {"type": "LOGIN", "player" : "Adam" }
-    ```
--   ```json
-    {"type": "READY"}
-    ```
+---
+
+Adam __doesn't__ place a bet.
+
 
 __Then__
 
 - [Adam receives]
--   ```json
-    {"type": "CONNECTED", "players":["Adam"]}
-    ```
--   ```json
-    {"type": "PLAYER_READY", "player" : "Adam" }
-    ```
--   ```json
-    {"type": "COUNTDOWN", "value" : 2 }
-    ```
 -   ```json
     {"type": "COUNTDOWN", "value" : 1 }
     ```

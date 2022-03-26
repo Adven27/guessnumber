@@ -49,6 +49,7 @@ public class Specs extends AbstractSpecs {
 
     public void logoutAll() {
         TESTERS.values().iterator().next().logoutAll();
+        TESTERS.values().forEach(WebSocketTester::loggedOut);
         TESTERS.values().forEach(WebSocketTester::purge);
     }
 

@@ -152,5 +152,9 @@ class WebSocketTester implements MqTester {
         AWAIT.until(() -> playing);
     }
 
+    public void loggedOut() {
+        AWAIT.until(() -> state == UNREGISTERED);
+    }
+
     enum State {UNREGISTERED, REGISTERED, READY, BET_PLACED}
 }
